@@ -6,5 +6,5 @@
   ### [Users_sessions](https://github.com/PaulinKingsly/Data_Analyst_Portfolio/blob/main/Users_sessions.ipynb)
   *Построение новой таблицы, анализ конверсии для A/B теста*
 # SQL
-  ### [Datalemur]
+  ### [Datalemur](https://datalemur.com/questions?category=SQL)
   *Решение задач Datalemur*
