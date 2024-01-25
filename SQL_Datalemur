@@ -1,4 +1,4 @@
-
+# Histogram of Tweets 
 
 select tweet_bucket, COUNT(user_id)
 from
