@@ -11,5 +11,5 @@
   *Решение задач Datalemur*
 # Tableau
   ### [Tableau](https://public.tableau.com/app/profile/polina.tsarkova/viz/Project_1_House_Sales/HouseSales?publish=yes)
-  *Интерактивный дашборт в Tableau 'House Sales*
+  *Интерактивный дашборт в Tableau 'House Sales'*
   
