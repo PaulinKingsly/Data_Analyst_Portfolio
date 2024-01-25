@@ -1,4 +1,4 @@
-# [Histogram of Tweets](https://datalemur.com/questions/sql-histogram-tweets)
+https://datalemur.com/questions/sql-histogram-tweets
 
 select tweet_bucket, COUNT(user_id)
 from
