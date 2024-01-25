@@ -1,0 +1,9 @@
+# [Histogram of Tweets](https://datalemur.com/questions/sql-histogram-tweets)
+
+select tweet_bucket, COUNT(user_id)
+from
+(SELECT COUNT(tweet_id) as tweet_bucket, user_id
+FROM tweets
+where tweet_date > '12-31-2021' and tweet_date < '12-31-2022'
+GROUP BY user_id) t1
+GROUP BY tweet_bucket
