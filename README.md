@@ -7,7 +7,7 @@
   *Исследовательский анализ данных по зарплатам людей с разными уровнями образования и опытом работы*
   ### [Users_sessions](https://github.com/PaulinKingsly/Data_Analyst_Portfolio/blob/main/Users_sessions.ipynb)
   *Построение новой таблицы, анализ конверсии для A/B теста*
-  ###[30 days of Pandas]()
+  ### [30 days of Pandas]()
   *Решение задач Leetcode 30 Days of Pandas*
 # SQL
   ### [SQL_Datalemur](https://github.com/PaulinKingsly/Data_Analyst_Portfolio/blob/main/SQL_Datalemur)
