@@ -28,8 +28,29 @@ def article_views(views: pd.DataFrame) -> pd.DataFrame:
    return views.loc[views['author_id'] == views['viewer_id'],
     ['author_id']].drop_duplicates().rename(columns={'author_id':'id'}).sort_values(by=['id'])
 
+1683. Invalid Tweets
 
+import pandas as pd
 
+def invalid_tweets(tweets: pd.DataFrame) -> pd.DataFrame:
+    return tweets[tweets['content'].str.len() > 15][['tweet_id']]
+
+1873. Calculate Special Bonus
+
+import pandas as pd
+
+def calculate_special_bonus(employees: pd.DataFrame) -> pd.DataFrame:
+
+    employees['bonus'] = employees.apply(lambda x: x['salary'] if x['employee_id'] % 2 != 0 and x['name'][0] != 'M' else 0, axis=1)
+    return employees.loc[:,['employee_id', 'bonus']].sort_values(by=['employee_id'])
+
+1667. Fix Names in a Table
+
+import pandas as pd
+
+def fix_names(users: pd.DataFrame) -> pd.DataFrame:
+    users['name'] = users['name'].str.capitalize()
+    return users.sort_values(by=['user_id'])
 
 
 
