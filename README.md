@@ -10,7 +10,7 @@
   ### [30 days of Pandas](https://github.com/PaulinKingsly/Data_Analyst_Portfolio/blob/main/30_days_of_Pandas)
   *Решение задач Leetcode 30 Days of Pandas*
 # SQL
-  ### [LeetCode SQL50]()
+  ### [LeetCode SQL50](https://github.com/PaulinKingsly/Data_Analyst_Portfolio/blob/main/Leetcode%20SQL50)
   *Решение задач Leetcode SQL50*
 # Tableau
   ### [Tableau](https://public.tableau.com/app/profile/polina.tsarkova/viz/Project_1_House_Sales/HouseSales?publish=yes)
