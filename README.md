@@ -10,9 +10,8 @@
   ### [30 days of Pandas](https://github.com/PaulinKingsly/Data_Analyst_Portfolio/blob/main/30_days_of_Pandas)
   *Решение задач Leetcode 30 Days of Pandas*
 # SQL
-  ### [SQL_Datalemur](https://github.com/PaulinKingsly/Data_Analyst_Portfolio/blob/main/SQL_Datalemur)
-  ### Datalemur(https://datalemur.com/questions?category=SQL) - ссылка на задачи
-  *Решение задач Datalemur*
+  ### [LeetCode SQL50]()
+  *Решение задач Leetcode SQL50*
 # Tableau
   ### [Tableau](https://public.tableau.com/app/profile/polina.tsarkova/viz/Project_1_House_Sales/HouseSales?publish=yes)
   *Интерактивный дашборт в Tableau 'House Sales'*
