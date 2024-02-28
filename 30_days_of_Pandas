@@ -84,11 +84,23 @@ import pandas as pd
 def game_analysis(activity: pd.DataFrame) -> pd.DataFrame:
     return activity.groupby('player_id').agg(first_login=('event_date', 'min')).reset_index()
 
+1795. Rearrange Products Table
 
+import pandas as pd
 
+def rearrange_products_table(products: pd.DataFrame) -> pd.DataFrame:
+    data = products.melt(id_vars = ['product_id'], value_vars=['store1', 'store2', 'store3'],
+    var_name='store', value_name = 'price').dropna()
+    return data
 
+596. Classes More Than 5 Students
 
+import pandas as pd
 
+def find_classes(courses: pd.DataFrame) -> pd.DataFrame:
+   
+    data= courses.groupby('class').count().reset_index()
+    return data[data['student'] >= 5][['class']]
 
 
 
