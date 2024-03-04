@@ -102,5 +102,18 @@ def find_classes(courses: pd.DataFrame) -> pd.DataFrame:
     data= courses.groupby('class').count().reset_index()
     return data[data['student'] >= 5][['class']]
 
+2356. Number of Unique Subjects Taught by Each Teacher
 
+import pandas as pd
+
+def count_unique_subjects(teacher: pd.DataFrame) -> pd.DataFrame:
+    teacher_gr = teacher.groupby('teacher_id')['subject_id'].nunique().reset_index()
+    return teacher_gr.rename({'subject_id': 'cnt'}, axis=1)
+
+586. Customer Placing the Largest Number of Orders
+
+import pandas as pd
+
+def largest_orders(orders: pd.DataFrame) -> pd.DataFrame:
+    return orders['customer_number'].mode().to_frame()
 
