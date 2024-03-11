@@ -1,18 +1,29 @@
-#595. Big Countries
+1280. Students and Examinations
+
+import pandas as pd
+
+def students_and_examinations(students: pd.DataFrame, subjects: pd.DataFrame, examinations: pd.DataFrame) -> pd.DataFrame:
+    data = subjects.merge(students, how='cross')
+    ex_count = examinations.groupby(['student_id', 'subject_name']).agg(attended_exams =('subject_name', 'count')).reset_index()
+    df= data.merge(ex_count, on=['student_id', 'subject_name'], how='left').sort_values(by = ['student_id', 'subject_name'])
+    df['attended_exams'] = df['attended_exams'].fillna(0)
+    return df[['student_id', 'student_name', 'subject_name', 'attended_exams']]
+
+595. Big Countries
 
 import pandas as pd
 
 def big_countries(world: pd.DataFrame) -> pd.DataFrame:
     return world[(world['area'] >= 3000000) | (world['population'] >=25000000)][['name', 'population', 'area']]
 
-#1757. Recyclable and Low Fat Products
+1757. Recyclable and Low Fat Products
 
 import pandas as pd
 
 def find_products(products: pd.DataFrame) -> pd.DataFrame:
     return products[(products['low_fats'] == 'Y') & (products['recyclable'] =='Y')][['product_id']]
 
-#183. Customers Who Never Order
+183. Customers Who Never Order
 
 import pandas as pd
 
@@ -20,7 +31,7 @@ def find_customers(customers: pd.DataFrame, orders: pd.DataFrame) -> pd.DataFram
     data = customers[~customers['id'].isin(orders['customerId'])]
     return data[['name']].rename(columns={'name': 'Customers'})
 
-#1148. Article Views I
+1148. Article Views I
 
 import pandas as pd
 
@@ -116,4 +127,22 @@ import pandas as pd
 
 def largest_orders(orders: pd.DataFrame) -> pd.DataFrame:
     return orders['customer_number'].mode().to_frame()
+
+1050. Actors and Directors Who Cooperated At Least Three Times
+
+import pandas as pd
+
+def actors_and_directors(actor_director: pd.DataFrame) -> pd.DataFrame:
+    data = actor_director.groupby(['actor_id', 'director_id']).agg(count=('director_id', 'count')).reset_index()
+    data = data[data['count'] >=3]
+    return data[['actor_id', 'director_id']]
+
+1378. Replace Employee ID With The Unique Identifier
+
+import pandas as pd
+
+def replace_employee_id(employees: pd.DataFrame, employee_uni: pd.DataFrame) -> pd.DataFrame:
+    data = employees.merge(employee_uni, how='left')
+    return data[['unique_id', 'name']]
+
 
